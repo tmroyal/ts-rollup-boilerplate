@@ -1,0 +1,1 @@
+export var mod = {hello: "world"};
