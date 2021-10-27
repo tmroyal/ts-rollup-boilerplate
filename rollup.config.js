@@ -6,8 +6,12 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 export default {
   input: 'src/index.ts',
   output: {
-    dir: 'output',
-    format: 'cjs'
+    dir: 'dist',
+    format: 'iife',
+    globals: {
+
+    }
   },
-  plugins: [typescript(), nodeResolve(), commonjs()]
+  plugins: [typescript(), nodeResolve({browser: true}), commonjs()],
+  external: []
 };
